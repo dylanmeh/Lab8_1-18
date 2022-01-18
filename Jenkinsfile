@@ -56,7 +56,7 @@ podTemplate(containers: [
         stage('test') {
             container('maven') {
                 stage('test') {
-                    if ("${props["mvntest]}" == 'true') {
+                    if ("${props["mvntest]}" == 'true'] {
                         sh 'mvn test'
                         junit 'target/surefire-reports/*.xml'
                     }    
