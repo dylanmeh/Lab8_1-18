@@ -5,6 +5,9 @@ podTemplate(containers: [
     containerTemplate(name: 'maven', image: 'maven:3.8.1-jdk-11', command: 'sleep', args: '99d')
 ]) {
     node(POD_LABEL) {
+        stage('scm checkout') {
+            checkout scm
+        }
         stage('declare properties file') {
             container('maven') {
                 stage('declare the properties file') {
