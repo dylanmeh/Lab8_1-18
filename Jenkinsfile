@@ -5,10 +5,6 @@ podTemplate(containers: [
     containerTemplate(name: 'maven', image: 'maven:3.8.1-jdk-11', command: 'sleep', args: '99d')
 ]) {
     node(POD_LABEL) {
-        stage('SCM Checkout') {
-            git url: 'https://github.com/dylanmeh/Lab8_1-10.git', branch: 'main'
-
-        }
         stage('declare properties file') {
             container('maven') {
                 stage('declare the properties file') {
