@@ -6,7 +6,7 @@ podTemplate(containers: [
 ]) {
     node(POD_LABEL) {
         stage('SCM Checkout') {
-            git url: 'https://github.com/dylanmeh/Lab6_1-10.git', branch: 'main'
+            git url: 'https://github.com/dylanmeh/Lab8_1-10.git', branch: 'main'
 
         }
         stage('declare properties file') {
